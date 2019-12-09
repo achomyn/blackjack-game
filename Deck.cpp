@@ -1,3 +1,10 @@
+#include "Deck.h"
+
+Deck::Deck()
+{
+  fillDeck();
+  shuffle();
+}
 Deck::dealCard(Hand& hand)
 {
   hand.add(m_deck.back());
