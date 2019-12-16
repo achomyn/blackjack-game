@@ -1,7 +1,7 @@
 #include "Card.h"
 using namespace std;
 
-Card::Card(char val, suit s)
+Card::Card(char val, int s)
 {
   m_card = val;
   if (val == 'J' || val == 'Q' || val == 'K' || 'T')

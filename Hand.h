@@ -14,18 +14,4 @@ class Hand
     std::vector<Card*> m_hand;
 };
 
-Hand::Hand(Card* c1, Card* c2)
-{
-  m_hand.addCard(c1);
-  m_hand.addCard(c2);
-}
-void Hand::clear()
-{
-  m_hand.clear();
-}
-int Hand::getTotal() const
-{
-  
-}
-
 #endif //HAND_H

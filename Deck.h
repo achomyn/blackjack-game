@@ -4,7 +4,7 @@
 #include "Hand.h"
 
 
-Class Deck : public Hand
+class Deck : public Hand
 {
 public:
   Deck();
