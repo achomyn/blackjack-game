@@ -9,10 +9,9 @@ class Deck : public Hand
 public:
   Deck();
   void shuffle();
+  int getSize() {return m_hand.size();}
   void dealCard(Hand& hand);
   void fillDeck();
-private:
-  std::vector<Card*> m_deck;
 };
 
 #endif //DECK_H
