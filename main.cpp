@@ -28,7 +28,7 @@ void playRound(Deck & m_Deck, vector<Player>& m_Players, Dealer & m_Dealer)
   //display all players hands followed by the dealer (Score included)
   for (int i = 0; i < m_Players.size(); i++)
   {
-    m_Players[i].display();
+    m_Players[i+1].display();
   }
   m_Dealer.display();
   //displays current player's hand and asks if they want to hit, each time they do their new hand is shown with new score until they bust or decide to stop hitting
