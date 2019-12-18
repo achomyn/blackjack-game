@@ -9,6 +9,7 @@ void Hand::clear()
 {
   m_hand.clear();
 }
+//get the total value of the hand and return the number.
 int Hand::getTotal() const
 {
   int sum = 0;
@@ -20,6 +21,7 @@ int Hand::getTotal() const
         sum += m_hand[i]->getValue();
       else
       {
+        //check if the card is an Ace then make it either 1 or 11 value depending on what helps the player most.
         if (sum > 10)
           sum += 1;
         else
@@ -29,6 +31,7 @@ int Hand::getTotal() const
   }
   return sum;
 }
+//add card to hand when either the player hits or when dealt in the beginning.
 bool Hand::addCard(Card* card)
 {
   m_hand.push_back(card);
