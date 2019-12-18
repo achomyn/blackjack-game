@@ -9,10 +9,13 @@ class Card
 {
 public:
   Card(char val, int s);
+  //used to get numerical value of card for scoring
   int getValue() { return m_value; }
+  //prints name of card and suit it belongs to
   std::string getCard();
   //if card is faceup relay the value and suit
   bool isFaceUp() const {return faceUp;}
+  //used to hide card (Dealer only shows 1 card in beginning)
   void flip() {faceUp = !faceUp;}
 
 private:

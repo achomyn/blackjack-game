@@ -7,6 +7,7 @@
 class Player : public GenericPlayer
 {
 public:
+  //Uses same constructor for GenericPlayer but the name is set by the user
   Player(const std::string& name) : GenericPlayer(name) {};
 
   //check if player wants to hit
@@ -19,4 +20,4 @@ public:
   void Push() const;
 };
 
-#endif 
+#endif

@@ -3,21 +3,23 @@
 #include <random>
 #include <algorithm>
 
+//Deck is a hand that stores 52 cards, uses the hand constructor to reserve Card vector space and fills it
 Deck::Deck() : Hand(52)
 {
-  std::cout<<"de-hello"<<std::endl;
   fillDeck();
-  std::cout<<"de-hello"<<std::endl;
   shuffle();
 }
+
+//Takes the hand passed to it and adds the top card of the Deck to the hand, and deletes the card from the deck
 void Deck::dealCard(Hand& hand)
 {
   hand.addCard(m_hand.back());
   m_hand.pop_back();
 }
+
+//Empties the deck, creates a card val for all 13 cards, then adds a newly created card for those 13 for each of the 4 suits.
 void Deck::fillDeck()
 {
-  int n = 0;
   m_hand.clear();
   char val;
   for (int i = 1; i <= 13; i++)
@@ -66,12 +68,12 @@ void Deck::fillDeck()
     }
     for (int j = Diamonds; j <= Clubs; j++)
     {
-      //std::cout<<"adding card "<<n <<std::endl;
       addCard(new Card(val, j));
-      n++;
     }
   }
 }
+
+//Checks if deck is empty, if not it creates a Uniform random number generator  
 void Deck::shuffle()
 {
   if (m_hand.empty())
