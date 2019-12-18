@@ -1,10 +1,10 @@
 #include "Hand.h"
-
+//reserves storage for the amount passed to the constructor
 Hand::Hand(int n)
 {
   m_hand.reserve(n);
 }
-
+//clears hand vector
 void Hand::clear()
 {
   m_hand.clear();
