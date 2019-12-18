@@ -11,6 +11,7 @@ public:
   Card(char val, int s);
   int getValue() { return m_value; }
   std::string getCard();
+  //if card is faceup relay the value and suit
   bool isFaceUp() const {return faceUp;}
   void flip() {faceUp = !faceUp;}
 

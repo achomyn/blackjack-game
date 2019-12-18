@@ -1,6 +1,6 @@
 #include "Card.h"
 using namespace std;
-
+// Assign values to the different cards
 Card::Card(char val, int s)
 {
   m_card = val;
@@ -12,7 +12,7 @@ Card::Card(char val, int s)
     m_value = (val - '0');
   m_suit = s;
 }
-
+//Assign the suit to each card
 std::string Card::getCard()
 {
   string sName = "";
@@ -31,6 +31,7 @@ std::string Card::getCard()
       sName = "Clubs";
       break;
   }
+  //print the value and suit of the cards in hand
   cout<<m_card<< " of " << sName<<endl;
   return "";
 }
